@@ -6,8 +6,10 @@ class CustomImage extends HTMLElement {
     shadow.innerHTML = `
       <style> 
         .image{
-          height: 33%;
-          width: 33%;
+          flex-grow: 1;
+          width: 100%;
+          padding: 10px;
+          border: 1px solid black;
         }
       </style>
 
