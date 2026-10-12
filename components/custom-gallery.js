@@ -9,6 +9,12 @@ class CustomGallery extends HTMLElement {
       .gallery {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .gallery > * {
+        margin: 1em;
+        width: calc(32% - 1em);
       }
     `;
 
@@ -17,7 +23,7 @@ class CustomGallery extends HTMLElement {
     const container = document.createElement("div");
     container.classList.add("gallery");
 
-    [1, 2, 3].forEach(() => {
+    [1, 2, 3, 4, 5, 6].forEach(() => {
       const image = document.createElement("custom-image");
       container.appendChild(image);
     });

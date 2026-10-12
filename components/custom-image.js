@@ -5,19 +5,29 @@ class CustomImage extends HTMLElement {
 
     shadow.innerHTML = `
       <style> 
-        .image{
+        .image {
           flex-grow: 1;
           width: 100%;
-          padding: 10px;
-          border: 1px solid black;
+        }
+
+        .image:hover {
+          opacity: 0.80;
+          cursor: pointer;
         }
       </style>
 
       <img class="image" >
+      <custom-dialog value="images/Indies.jpg" />
     `;
 
     shadow.querySelector(".image").src="images/Indies.jpg"
     shadow.querySelector(".image").alt="Indies"
+
+    const button = shadow.querySelector(".image");
+    button.addEventListener("click", function() {
+      const dialog = shadow.querySelector("custom-dialog");
+      dialog.open();
+    });
   }
 }
 

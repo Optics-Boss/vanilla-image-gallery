@@ -1,2 +1,3 @@
 import "/components/custom-gallery.js";
 import "/components/custom-image.js";
+import "/components/custom-dialog.js";
